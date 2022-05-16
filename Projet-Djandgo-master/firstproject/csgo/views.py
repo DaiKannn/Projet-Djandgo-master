@@ -43,7 +43,7 @@ def updatetraitementcsgo(request, id):
          CSGO = pform.save(commit=False)
          CSGO.id = id
          CSGO.save()
-         return HttpResponseRedirect("/csgo/")
+         return HttpResponseRedirect("/csgo/accueilcsgo")
      else:
          return render(request, "csgo/formulairecsgo.html", {"form": pform, "id": id})
 
