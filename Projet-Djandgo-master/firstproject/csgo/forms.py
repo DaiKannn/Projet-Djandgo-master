@@ -5,33 +5,35 @@ from . import models
 class CSGOForm(ModelForm):
     class Meta:
         model = models.CSGO
-        fields = ('Nom_du_Major', 'auteur', 'date_parution', 'nombres_pages','resume')
+        fields = ('Nom_du_Major', 'Lieu', 'date_debut', 'date_fin', 'nombres_equipes','resultat')
         labels = {
             'Nom_du_Major' : _('Major'),
-            'auteur' : _('Auteur') ,
-            'date_parution' : _('date␣de␣parution'),
-            'nombres_pages' : _('nombres␣de␣pages'),
-            'resume' : _('Résumé'),
+            'Lieu' : _('Lieu') ,
+            'date_debut' : _('date_debut'),
+            'date_fin': _('date_fin'),
+            'nombres_equipes' : _('nombres␣equipes'),
+            'resultat' : _('Resultat'),
         }
 
 class MajorForm(ModelForm):
     class Meta:
         model = models.Major
-        fields = ('Universite', 'Region', 'Departement', 'nombres_de_livres')
+        fields = ('Horaire', 'Equipe','Score', 'Stats')
         labels = {
-            'Universite': _('Universite'),
-            'Region': _('Region'),
-            'Departement': _('Departement'),
-            'nombres_de_livres': _('nombres_de_livres'),
+            'Horaire': _('Horaire'),
+            'Equipe': _('Equipe'),
+            'Score': _('Score'),
+            'Stats': _('Stats'),
         }
 class CSGOInstantForm(ModelForm):
     class Meta:
         model = models.CSGO
-        fields = ('Nom_du_Major', 'auteur', 'date_parution', 'nombres_pages','resume')
+        fields = ('Nom_du_Major', 'Lieu', 'date_debut', 'date_fin', 'nombres_equipes', 'resultat')
         labels = {
-            'Nom_du_Major' : _('Major'),
-            'auteur' : _('Auteur') ,
-            'date_parution' : _('date␣de␣parution'),
-            'nombres_pages' : _('nombres␣de␣pages'),
-            'resume' : _('Résumé'),
+            'Nom_du_Major': _('Major'),
+            'Lieu': _('Lieu'),
+            'date_debut': _('Date_debut'),
+            'date_fin': _('Date_fin'),
+            'nombres_equipes': _('Nombres␣equipes'),
+            'resultat': _('Resultat'),
         }
