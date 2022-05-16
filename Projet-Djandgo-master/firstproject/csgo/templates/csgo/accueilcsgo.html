@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title> Csgo </title>
+    <link rel="stylesheet" href="csgo.css"/>
+</head>
+<body>
+ <div id="Titre">
+            <h1> The Major </h1>
+            <p><nav>
+                <a href="affichecsgo.html"> Les Majors</a>
+                <a href="accueilmajor.html"> Major Antwerp en temps réel</a>
+            </nav>
+        </div>
+<ul>
+{% for l in liste %}
+<li>{{l}} <a href="/csgo/affichecsgo/{{l.id}}/"> affiche </a> <a href="/csgo/updatecsgo/{{l.id}}/"> update </a> <a href="/csgo/deletecsgo/{{l.id}}/"> delete </a></li>
+
+{% endfor %}
+    </ul>
+<a href ="/csgo/formulairecsgo/"> ajouter une bibliothèque</a>
+</body>
+</html>

@@ -1,0 +1,59 @@
+#Titre, #Informations_Personnelles, #Diplômes, #Expériences_Professionnelles, #Informations_diverses
+{
+    display: inline-block;
+    vertical-align: top;
+}
+
+#Titre
+{
+    width: 100%;
+    background-color : slategrey;
+	float : center;
+	margin-left : 0%;
+    margin-top : 0%;
+    text-align: center;
+	font-size :15px;
+    color : whitesmoke;
+
+}
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: Avenir, sans-serif;
+}
+
+nav {
+    display: table;
+    width : 100%;
+
+}
+nav > a {
+    display: table-cell;
+    width : 25%;
+    text-align: center;
+    border: 5px;
+    background-color : slategrey;
+    padding: 10px 0px;
+    text-decoration: none;
+}
+nav a:hover{
+    color: orange;
+    border-bottom: 2px solid gold;
+}
+.conteneur{
+  margin: 0px 20px;
+  height: 1500px;
+}
+
+@media all and (max-width: 1024px)
+{
+    section
+    {
+        display: block;
+        width: auto;
+    }
+
+    #Titre
+    {
+        width: auto;
+    }
