@@ -16,6 +16,7 @@ urlpatterns = [
     path("updatetraitementmajor/<int:id>/", views.updatetraitementmajor),
     path ("deletemajor/<int:id>/", views.deletemajor),
     path('traitementinstantcsgo/<int:id>/', views.traitementinstantcsgo),
-    path('formulaireinstantcsgo/<int:id>/', views.formulaireinstantcsgo)
+    path('formulaireinstantcsgo/<int:id>/', views.formulaireinstantcsgo),
+    path('accueilcsgo/affichecsgo.html/<int:id>', views.affichecsgo)
 
 ]
