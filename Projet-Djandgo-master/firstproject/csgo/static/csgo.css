@@ -1,5 +1,5 @@
 body{
-    background-image : url(cs.jpg);
+    background-image : url(Csgo.jpg);
     background-size : cover;
     margin : 0px;
     color : whitesmoke;
@@ -70,6 +70,15 @@ nav a:hover{
 
 }
 th{
-    width:10%;
-    color: pink;
+    border: 1px solid #333;
+    background-color: rgb(192, 190, 190);
+    color: black;
+    width: 10%;
+}
+
+td{
+    background-color: rgba(22, 22, 22, 0.95);
+    color: #ce8404;
+    padding: 1px 5px 1px 5px;
+    width: 10%;
 }
