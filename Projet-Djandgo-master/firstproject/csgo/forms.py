@@ -19,12 +19,12 @@ class CSGOForm(ModelForm):
 class MajorForm(ModelForm):
     class Meta:
         model = models.Major
-        fields = ('Horaire', 'Equipe','Score', 'Stats')
+        fields = ( 'tournoi','Nom','Maps_Jouées', 'Rating')
         labels = {
-            'Horaire': _('Horaire'),
-            'Equipe': _('Equipe'),
-            'Score': _('Score'),
-            'Stats': _('Stats'),
+            'tournoi': _('tournoi'),
+            'Nom': _('Nom'),
+            'Maps_Jouées': _('Maps'),
+            'Rating': _('Rating'),
         }
 class CSGOInstantForm(ModelForm):
     class Meta:

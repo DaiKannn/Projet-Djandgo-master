@@ -20,15 +20,16 @@ class CSGO(models.Model):
 
 
 class Major(models.Model):
-    Horaire = models.CharField(max_length=100)
-    Equipe = models.CharField(max_length=100)
-    Score = models.IntegerField(blank=True, null=True)
-    Stats = models.IntegerField(blank=False)
+    tournoi = models.CharField(max_length=100)
+    Nom = models.CharField(max_length=100)
+    Maps_Jouées = models.IntegerField(blank=False)
+    Rating = models.IntegerField(blank=False)
+
 
     def __str__(self):
-        chaine = f"{self.Horaire} opposant {self.Equipe} le resultat {self.Score} voici les stats des joueurs {self.Stats}"
+        chaine = f"{self.tournoi} fefef {self.Nom} le resultat {self.Maps_Jouées} voici les stats des joueurs {self.Rating}"
         return chaine
 
     def dico(self):
-        return {"Horaire": self.Horaire, "Equipe": self.Equipe, "Score": self.Score,
-                "Stats": self.Stats}
+        return {"tournoi": self.tournoi,"Nom": self.Nom, "Maps_Jouées": self.Maps_Jouées,
+                "Rating": self.Rating}

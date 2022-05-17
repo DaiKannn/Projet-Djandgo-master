@@ -72,9 +72,11 @@ def traitementinstantcsgo(request, id):
          else:
              return render(request, 'csgo/formulaireinstantcsgo.html', {'form': pForm, "id": id})
 
-def accueilmajor(request):
-        liste = list(models.Major.objects.all())
-        return render(request, "Major/accueilmajor.html", {"liste": liste})
+def affichemajor(request):
+    major = models.Major.objects.all()
+    allmvp = models.Major.objects.all()
+    return render(request, "Major/affichemajor.html", {"major": major, "allmvp": allmvp})
+
 
 def formulairemajor(request):
      if request.method == "POST":
@@ -83,11 +85,6 @@ def formulairemajor(request):
      else:
          form = MajorForm()
          return render(request, 'Major/formulairemajor.html', {'form': form})
-
-def affichemajor(request, id):
-     Major = models.Major.objects.get(pk=id)
-     return render(request, "Major/affichemajor.html", {"Major": Major})
-
 
 def traitementmajor(request):
      pForm = MajorForm(request.POST)
