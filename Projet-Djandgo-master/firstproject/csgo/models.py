@@ -11,7 +11,7 @@ class CSGO(models.Model):
     resultat = models.TextField(null=True, blank=True)
 
     def __str__(self):
-        chaine = f" Voici le major {self.Nom_du_Major} qui a eu lieu {self.Lieu} entre le {self.date_debut} et le {self.date_fin} avec {self.nombres_equipes} .Le cash prize etait de {self.prix}.Le resultat fut  {self.resultat}"
+        chaine = f" Voici le major {self.Nom_du_Major} qui a eu lieu {self.Lieu} entre le {self.date_debut} et le {self.date_fin} avec {self.nombres_equipes} .Le cash prize etait de {self.prix}.  {self.resultat}"
         return chaine
 
     def dico(self):

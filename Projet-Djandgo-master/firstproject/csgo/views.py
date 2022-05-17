@@ -25,9 +25,11 @@ def traitementcsgo(request):
     else:
         return render(request, 'csgo/traitementcsgo.html', {'form': pForm})
 
-def affichecsgo(request, id):
-    CSGO = models.CSGO.objects.get(pk=id)
-    return render(request, "csgo/affichecsgo.html", {"csgo": CSGO})
+def affichecsgo(request):
+    csgo = models.CSGO.objects.all()
+    allmajor = models.CSGO.objects.all()
+    return render(request, "csgo/affichecsgo.html", {"csgo": csgo, "allmajor": allmajor})
+
 
 
 
