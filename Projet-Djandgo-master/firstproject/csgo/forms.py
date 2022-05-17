@@ -5,13 +5,14 @@ from . import models
 class CSGOForm(ModelForm):
     class Meta:
         model = models.CSGO
-        fields = ('Nom_du_Major', 'Lieu', 'date_debut', 'date_fin', 'nombres_equipes','resultat')
+        fields = ('Nom_du_Major', 'Lieu', 'date_debut', 'date_fin', 'nombres_equipes','prix','resultat')
         labels = {
             'Nom_du_Major' : _('Major'),
             'Lieu' : _('Lieu') ,
             'date_debut' : _('date_debut'),
             'date_fin': _('date_fin'),
             'nombres_equipes' : _('nombres␣equipes'),
+            'prix': _('Prix'),
             'resultat' : _('Resultat'),
         }
 
@@ -28,12 +29,13 @@ class MajorForm(ModelForm):
 class CSGOInstantForm(ModelForm):
     class Meta:
         model = models.CSGO
-        fields = ('Nom_du_Major', 'Lieu', 'date_debut', 'date_fin', 'nombres_equipes', 'resultat')
+        fields = ('Nom_du_Major', 'Lieu', 'date_debut', 'date_fin', 'nombres_equipes', 'prix','resultat')
         labels = {
             'Nom_du_Major': _('Major'),
             'Lieu': _('Lieu'),
             'date_debut': _('Date_debut'),
             'date_fin': _('Date_fin'),
             'nombres_equipes': _('Nombres␣equipes'),
+            'prix': _('Prix'),
             'resultat': _('Resultat'),
         }
